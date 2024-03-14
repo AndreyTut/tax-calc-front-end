@@ -1,0 +1,14 @@
+<div class="container">
+  <input type="number" class="form-control" [(ngModel)]="salary">
+  <button class="btn" [disabled]="salary===''" (click)="getTaxDetails()">Calculate</button>
+</div>
+<div *ngIf="textDetails != null" class="container">
+  <p class="card-content">
+    Gross Annual Salary: {{textDetails.grossAnnualSalary}} <br>
+    Gross Monthly Salary: {{textDetails.grossMonthlySalary}} <br>
+    Net Annual Salary: {{textDetails.netAnnualSalary}} <br>
+    Net Monthly Salary: {{textDetails.netMonthlySalary}} <br>
+    Annual Tax Paid: {{textDetails.annualTax}} <br>
+    Monthly Tax Paid: {{textDetails.monthlyTax}} <br>
+  </p>
+</div>
